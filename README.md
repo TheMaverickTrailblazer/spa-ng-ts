@@ -1,2 +1,2 @@
 # spa-ng-ts
-Reference architecture for SPA using Angular Typescript
+Reference architecture for Single Page Application using Angular Typescript
