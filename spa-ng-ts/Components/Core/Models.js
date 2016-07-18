@@ -17,4 +17,3 @@ var Cricket;
         var MatchFormat = Model.MatchFormat;
     })(Model = Cricket.Model || (Cricket.Model = {}));
 })(Cricket || (Cricket = {}));
-//# sourceMappingURL=Models.js.map

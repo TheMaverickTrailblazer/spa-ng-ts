@@ -1,4 +1,4 @@
-﻿module Cricket.Model {
+﻿namespace Cricket.Model {
     export interface Match {
         Avenue: string;
         Date: string;

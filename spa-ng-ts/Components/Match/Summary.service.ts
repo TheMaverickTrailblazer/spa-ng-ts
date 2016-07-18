@@ -1,18 +1,18 @@
-﻿module Cricket {
+﻿namespace Cricket {
     export interface ISummaryService {
-        getScoreCard(): Model.Match;
+        getScoreCard(): ng.IPromise<Model.Match>;
     }
 
     export class SummaryService implements ISummaryService {
-        public getScoreCard(): Model.Match {
-            var match = <Model.Match>{};
-            match.Avenue = "Chennai";
-            match.Date = "07/01/2016";
-            match.Format = Model.MatchFormat.ODI;
-            match.Team1Name = "India";
-            match.Team2Name = "Australia";
+        static $inject = ["$http"];
+        constructor(private $http: ng.IHttpService) {
+        }
+        public getScoreCard(): ng.IPromise<Model.Match> {
+             return this.getMatchDetails();
+        }
 
-            return match;
+        private getMatchDetails(): ng.IPromise<any> {
+            return this.$http.get("Store/Match.json").then((response) => response.data);
         }
     }
     angular.module("Cricket").service("SummaryService", SummaryService);

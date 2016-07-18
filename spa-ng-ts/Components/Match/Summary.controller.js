@@ -6,11 +6,13 @@ var Cricket;
             this.populateView();
         }
         SummaryController.prototype.populateView = function () {
-            this.match = this.summaryService.getScoreCard();
+            var _this = this;
+            this.summaryService.getScoreCard().then(function (match) {
+                _this.match = match;
+            });
         };
         SummaryController.$inject = ["SummaryService"];
         return SummaryController;
     }());
     angular.module('Cricket').controller('SummaryController', SummaryController);
 })(Cricket || (Cricket = {}));
-//# sourceMappingURL=Summary.controller.js.map

@@ -1,8 +1,12 @@
-declare module Cricket {
+declare namespace Cricket {
     interface ISummaryService {
-        getScoreCard(): Model.Match;
+        getScoreCard(): ng.IPromise<Model.Match>;
     }
     class SummaryService implements ISummaryService {
-        getScoreCard(): Model.Match;
+        private $http;
+        static $inject: string[];
+        constructor($http: ng.IHttpService);
+        getScoreCard(): ng.IPromise<Model.Match>;
+        private getMatchDetails();
     }
 }

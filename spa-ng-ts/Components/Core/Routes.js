@@ -19,4 +19,3 @@ var Cricket;
         }
     ]);
 })(Cricket || (Cricket = {}));
-//# sourceMappingURL=Routes.js.map

@@ -1,4 +1,4 @@
-declare module Cricket.Model {
+declare namespace Cricket.Model {
     interface Match {
         Avenue: string;
         Date: string;

@@ -1,4 +1,4 @@
-﻿module Cricket {
+﻿namespace Cricket {
     class RouteConfig {
         constructor(private $stateProvider: ng.ui.IStateProvider, private $urlRouterProvider: ng.ui.IUrlRouterProvider) {
 

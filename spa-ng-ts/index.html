@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Yorker</title>
-    <link rel="stylesheet" href="app.css" type="text/css" />
+    <link rel="stylesheet" href="/Content/app.css" type="text/css" />
 
     <script src="Scripts/angular.js"></script>
     <script src="Scripts/angular-ui-router.js"></script>
@@ -12,10 +12,12 @@
     <script src="Components/Core/Models.js"></script>
     <script src="Components/Match/Summary.service.js"></script>
     <script src="Components/Match/Summary.controller.js"></script>
-    
+  
+    <script src="Components/Shared/Header.controller.js"></script>
+    <script src="Components/Shared/Header.directive.js"></script>
 </head>
 <body ng-app="Cricket">
-    <h1>Cricket Scorer App</h1>
+    <yorker-header></yorker-header>
     <div ui-view></div>
 </body>
 </html>

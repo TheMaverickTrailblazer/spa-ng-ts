@@ -1,4 +1,4 @@
-﻿module Cricket {
+﻿namespace Cricket {
 
     class SummaryController {
         public match: Model.Match;
@@ -10,7 +10,9 @@
         }
 
         populateView() {
-            this.match = this.summaryService.getScoreCard();
+            this.summaryService.getScoreCard().then((match: Model.Match) => {
+                this.match = match;
+            });
         }
         
     }

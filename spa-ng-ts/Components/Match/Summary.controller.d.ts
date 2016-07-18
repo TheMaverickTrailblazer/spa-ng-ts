@@ -1,2 +1,2 @@
-declare module Cricket {
+declare namespace Cricket {
 }
